@@ -1,0 +1,1203 @@
+*{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    min-height: 200vh;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Oswald', sans-serif;
+}
+p{
+    color: rgb(117, 117, 117);
+    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+ul li{
+    cursor: pointer;
+}
+
+
+/* Scroll Up */
+.tScrollUp{
+    background-color: #e3000e;
+    height: 45px;
+    width: 45px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none
+}
+
+
+/* Header */
+.tHeader{
+    position: relative;
+    height: 411.19px;
+    background-image: url('../Images/about-page.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.tHeader h2{
+    color: #fff;
+    font-size: 64px;
+}
+.tHeader .tHomeAbout{
+    color: #fff;
+    font-size: 14.8px;
+    font-weight: 500;
+    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.tHeader a{
+    color: #fff;
+    text-decoration: underline;
+}
+.tNavMenu{
+    /* display: none; */
+    position: fixed;
+    top: 0px;
+    padding-top: 20px;
+    z-index: 1000;
+}
+
+/* Navbar */
+.tNavMenu ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tNavMenu ul img{
+    height: 80px;
+}
+.tHeader .tNavMenu ul li .tDownArrow{
+    height: 6px;
+    width: 6px;
+    display: inline-block;
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+}
+
+.tNavMenu ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0px 16px;
+    font-size: 18px;
+    font-family: 'Oswald', sans-serif;
+    margin-left: -25px;
+}
+.tNavMenu ul li a{
+    box-sizing: border-box;
+    color: #fff;
+    padding: 0px 16px;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Oswald', sans-serif;
+    text-decoration: none;
+    line-height: 80px;
+    transition:  all 400ms;
+}
+.tNavMenu ul li:hover a{
+    color: #f7be27;
+}
+
+.tBlackItem{
+    color: #000 !important;
+}
+.tWhiteNav{
+    background-color: #fff;
+    width: 100%;
+    padding-bottom: 10px;
+    box-shadow: 0px 2px 5px #444;
+    transition: all 0.5s;
+}
+
+.tNavMenu ul li:nth-child(1){
+    margin-right: 220px;
+}
+.tNavMenu ul li:nth-child(7) a{
+    color: #f7be27;
+    font-size: 24px;
+    font-weight: 500;
+}
+.tNavMenu ul .tshopping_icon{
+    color: #fff;
+    transition: all 400ms;
+}
+.tNavMenu ul .tshopping_icon:hover{
+    color: #f7be27;
+}
+
+/* Responsive navbar */
+.tResponsiveNav{
+    visibility: hidden;
+    height: 90px;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    color: #000;
+    position: absolute;
+    top: 0px;
+    z-index: 1800;
+}
+.tResponsiveNav ul{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.tResponsiveNav ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tResponsiveNav ul .tResLogo{
+    height: 70px;
+}
+.tResponsiveNav ul .tMenuIcon{
+    width: 27px;
+    height: 24px;
+    position: relative;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 400ms;
+    cursor: pointer;
+}
+#tCheck:checked ~ .tMenuIcon{
+    transform: rotate(-45deg);
+}
+#tCheck:checked ~ .tMenuIcon .topLine {
+    transform: rotate(-90deg) translateX(3px);
+}
+#tCheck:checked ~ .tMenuIcon .bottomLine {
+    transform: rotate(-90deg);
+}
+#tCheck:checked ~.tMenuIcon .centerLine{
+    top: 8.5px;
+}
+#tCheck:checked + .dropdown_lists{
+    display: flex;
+}
+.tResponsiveNav ul .tMenuIcon .tLine{
+    height: 4px;
+    width: 100%;
+    background-color: #000;
+    position: absolute;
+    border-radius: 2px;
+    transform-origin: right;
+    transition: 400ms;
+}
+
+.tResponsiveNav ul .tMenuIcon .topLine{
+    width: 50%;
+    top: -1px;
+    left: 0px;
+}
+
+.tResponsiveNav ul .tMenuIcon .bottomLine{
+    width: 50%;
+    bottom: -2px;
+    right: -0.4220px;
+    transform-origin: left;
+}
+
+.dropdown_lists{
+    list-style-type: none;
+    background-color: #fff;
+    min-height: 200px;
+    width: 100%;
+    position: absolute;
+    z-index: 1500;
+    top: -700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all 400ms;
+}
+.dropdown_lists i{
+    transition: all 400ms;
+}
+.dropdown_lists li{
+    margin: 5px auto;
+    width: 85%;
+    background-color: rgb(250, 250, 250);
+    text-align: center;
+}
+.dropdown_lists li:nth-child(6) a{
+    color: #f7be27;
+    font-size: 32px;
+    font-weight: 500;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: -0.5px;
+}
+.dropdown_lists li:last-child{
+    line-height: 80px;
+}
+.dropdown_lists li:last-child:hover i{
+    color: #f7be27;
+}
+.dropdown_lists li a{
+    box-sizing: border-box;
+    color: #000;
+    padding: 0px 16px;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Oswald', sans-serif;
+    text-decoration: none;
+    line-height: 80px;
+    transition: all 400ms;
+}
+.dropdown_lists li:hover a{
+    color: #f7be27;
+}
+/* Nothing Brings People Together Like A Good Burger */
+.tNothingBringsPeopleTogether{
+    padding-top: 100px;
+}
+.tTextOfNothingBrings{
+    padding: 45px 25px;
+}
+.tImageOfNothingBrings img{
+    width: 540px;
+}
+
+.tTextOfNothingBrings h2{
+    margin-bottom: 25px;
+    line-height: 1.3;
+    font-size: 52px;
+    font-weight: 500;
+    font-family: 'Oswald', sans-serif;
+}
+.tTextOfNothingBrings p{
+    color: #283034;
+    /* line-height: 25px; */
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 27px;
+}
+.tTextOfNothingBrings ul{
+    margin: 0;
+    margin-top: 16px;
+    margin-left: 15px;
+    padding: 0;
+}
+
+
+/* BURGERS What Else? */
+.tBurgersWhatElse{
+    background-image: url('../Images/burgers_about-1.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 655.09px;
+    margin-top: 100px;
+    padding: 85px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tBurgersWhatElse .tInsideElements{
+    width: 910px;
+    padding: 85px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.tBurgersWhatElse h2{
+    font-size: 68px;
+    margin-bottom: 25px;
+}
+.tBurgersWhatElse h2 span{
+    color: #f7be27;
+}
+.tBurgersWhatElse p{
+    margin-bottom: 45px;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+}
+.tBurgersWhatElse ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 920px;
+    padding: 0 5%;
+    margin-bottom: 10px;
+}
+.tBurgersWhatElse ul img{
+    height: 75px;
+    width: 75px;
+}
+.tBurgersWhatElse h6{
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+.tBurgersWhatElse a{
+    background-color: #e3000e;
+    color: #fff;
+    margin-top: 25px;
+    padding: 15px 38px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 500;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 0.5px;
+    line-height: 17px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    transition: all 400ms;
+}
+.tBurgersWhatElse a:hover{
+    background-color: transparent;
+    color: #e3000e;
+    border: 1px solid #e3000e;
+}
+
+/* Discover The New Taste */
+.tDiscoverTheNewTAste{
+    box-sizing: border-box;
+    padding-top: 100px;
+    padding-bottom: 60px;
+    min-height: 966.7px;
+}
+.tDiscoverTheNewTAste .tLeftSide{
+    padding: 30px 30px 0;
+}
+.tDiscoverTheNewTAste h2{
+    margin-bottom: 25px;
+    line-height: 1.3;
+    font-size: 52px;
+    font-weight: 500;
+    font-family: 'Oswald', sans-serif;
+}
+.tDiscoverTheNewTAste .tLeftSide p{
+    margin-bottom: 40px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 27px;
+}
+.tDiscoverTheNewTAste .tLeftSide img{
+    width: 480px;
+    object-fit: cover;
+}
+.tDiscoverTheNewTAste .tRightSide p{
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 30px;
+    padding-left: 20px;
+    line-height: 27px;
+}
+.tDiscoverTheNewTAste .tRightSide img{
+    width: 540px;
+    object-fit: cover;
+}
+
+
+
+/* Careers  Order Now   Gift cards */
+.tCareers_OrderNow_GiftCards{
+    /* background-color: brown; */
+    height: 360.5px;
+    margin: 0;
+    padding: 0;
+}
+.tCareers_OrderNow_GiftCards .tLeftSide, .tCareers_OrderNow_GiftCards .tCenter, .tCareers_OrderNow_GiftCards .tRightSide{
+    background-image: url('../Images/pb-1-1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 6px;
+    height: 360.5px;
+}
+.tCareers_OrderNow_GiftCards .tInside{
+    padding: 50px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    top: 90px;
+    background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, .8), rgba(0, 0, 0, .02));
+    border-radius: 6px;
+}
+.tCareers_OrderNow_GiftCards h3{
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 41px;
+    font-weight: 500;
+    text-align: center;
+}
+.tCareers_OrderNow_GiftCards p{
+    color: #fff;
+    margin-bottom: 16px;
+    font-size: 19px;
+    text-align: center;
+}
+.tCareers_OrderNow_GiftCards a{
+    background-color: #e3000e;
+    color: #fff;
+    padding: 13px 32px;
+    font-size: 16px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    text-align: center;
+    transition: all 400ms;
+}
+.tCareers_OrderNow_GiftCards a:hover{
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+/* Left Side */
+.tCareers_OrderNow_GiftCards .tLeftSide{
+    background-image: url('../Images/pb-1-1.jpg');
+}
+
+/* Center */
+.tCareers_OrderNow_GiftCards .tCenter{
+    background-image: url('../Images/pb-1-2.jpg');
+   margin-left: -5px;
+   margin-right: -5px;
+}
+
+/* Right Side */
+.tCareers_OrderNow_GiftCards .tRightSide{
+    background-image: url('../Images/pb-1-3.jpg');
+
+}
+
+
+/* Events & Catering */
+.tEventsCatering{
+    min-height: 839.38px;
+    padding: 80px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.tEventsCatering h2{
+    font-size: 60px;
+}
+.tEventsCatering .header_p{
+    width: 920px;
+    margin: 20px 0;
+    font-size: 20px;
+    padding: 0 165px;
+    text-align: center;
+    font-weight: 300;
+}
+.tEventsCatering ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+.tEventsCatering ul li{
+    margin: 15px;
+    margin-left: 0px;
+}
+.tEventsCatering ul .img_div{
+    height: 275px;
+    width: 330px;
+    object-fit: cover;
+    overflow: hidden;
+}
+.tEventsCatering ul img{
+    height: 100%;
+    width: 100%;
+    transition: all 400ms;
+}
+.tEventsCatering ul img:hover{
+    transform: scale(1.2);
+}
+.tEventsCatering ul h5{
+    width: 340px;
+    text-align: center;
+    margin: 25px 0;
+}
+.tEventsCatering ul p{
+    width: 340px;
+    text-align: center;
+    font-size: 15.6px;
+}
+.tEventsCatering ul h5 a{
+    text-decoration: none;
+    color: #333;
+    font-size: 26px;
+}
+
+
+/* Subscribe */
+.tSubscripe{
+    background-color: #f6f9fa;
+    height: 297.59px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.tSubscripe h3{
+    font-size: 42px;
+    text-align: center;
+}
+.tSubscripe p{
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+}
+.tSubscripe input{
+    height: 58px;
+    width: 479.22px;
+    line-height: 24px;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 0 20px;
+    border: 1px solid #ddd;
+}
+.tSubscripe .tMyBtn{
+    background-color: rgb(227, 0, 14);
+    color: #fff;
+    height: 58px;
+    padding: 15px 60px;
+    font-size: 18.4px;
+    font-weight: 500;
+    font-family: 'Oswald',sans-serif;
+    letter-spacing: 0.5px;
+    border: none;
+}
+
+
+/* Footer */
+.tFooter{
+    /* background-color: darkblue; */
+    height: 468px;
+    padding-top: 80px;
+    padding-bottom: 40px;
+}
+.tTestoBurger, .tOrderNow, .tWorkingHours, .tInstagramFeed{
+    padding: 0 15px;
+}
+.tFooter h5{
+    color: #283034;
+    margin-bottom: 25px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.tFooter p{
+    color: rgb(117, 117, 117);
+    font-size: 16px;
+    font-weight: 300;
+}
+.tFooter .tTestoBurger p{
+    line-height: 28px;
+}
+.tFooter a{
+    color: rgb(117, 117, 117);
+    text-decoration: none;
+}
+.tFooter .tHelloMail{
+    font-weight: 500;
+}
+.tFooter .tPhoneNumber{
+    color: #f7be27;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.85em;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+.tFooter .tTestoBurger img{
+    height: 95px;
+    margin: 10px 0px 10px 0px;
+}
+.tFooter .tInstagramFeed{
+    min-height: 200px;
+    width: 280px;
+}
+.tFooter .tInstagramFeed img{
+    height: 75px;
+    width: 75px;
+    margin: 4px;
+    border-radius: 5px;
+}
+.tFooter .tLittleInstagramPhotos ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tFooterLinks{
+    color: #757575;
+    font-size: 17px;
+    font-weight: 300;
+}
+.tFooterLinks ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.tFooterLinks .container_ul .all_right_reserved{
+    width: 300px;
+}
+.tFooterLinks .container_ul{
+    margin-top: 20px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tFooterLinks .container_ul ul{
+    width: 370px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width:1199px) {
+
+    /* Nothing Brings People Together */
+    .tImageOfNothingBrings img{
+        width: 450px;
+    }
+    .tTextOfNothingBrings{
+        margin-top: -30px;
+        padding: 45px 5px;
+    }
+    .tTextOfNothingBrings h2{
+        font-size: 46.24px;
+    }
+    .tTextOfNothingBrings p{
+        font-size: 16.4px;
+    }
+
+    /* Burgers What Else */
+    .tBurgersWhatElse{
+        padding: 0px;
+    }
+    .tBurgersWhatElse h2{
+        font-size: 64px;
+    }
+    .tBurgersWhatElse p{
+        font-size: 18.24px;
+        padding: 0 93px;
+    }
+    .tBurgersWhatElse ul{
+        box-sizing: border-box;
+        padding: 0 90px;
+    }
+    .tBurgersWhatElse h6{
+        font-size: 17px;
+    }
+
+    /* Discover The New Taste */
+    .tDiscoverTheNewTAste h2{
+        font-size: 46.24px;
+        width: 430px;
+    }
+    .tDiscoverTheNewTAste p{
+        font-size: 16px;
+    }
+    .tDiscoverTheNewTAste .tLeftSide{
+        margin-right: 20px;
+    }
+    .tDiscoverTheNewTAste .tLeftSide img{
+        width: 430px;
+    }
+    .tDiscoverTheNewTAste .tRightSide img{
+        width: 450px;
+    }
+    .tDiscoverTheNewTAste{
+        min-height: 950px;
+    }
+    
+    /* Careers  Order Now   Gift cards */
+    .tCareers_OrderNow_GiftCards .tLeftSide, .tCareers_OrderNow_GiftCards .tCenter, .tCareers_OrderNow_GiftCards .tRightSide{
+        height: 272px;
+    }
+    .tCareers_OrderNow_GiftCards .tInside{
+        top: 10px;
+    }
+    .tCareers_OrderNow_GiftCards h3{
+        font-size: 37.28px;
+    }
+    .tCareers_OrderNow_GiftCards p{
+        font-size: 17.28px;
+    }
+
+    /* Events & Catering */
+    .tEventsCatering{
+        padding-top: 00px;
+    }
+    .tEventsCatering h2{
+        font-size: 53.6px;
+    }
+    .tEventsCatering .header_p{
+        font-size: 18.24px;
+    }
+    .tEventsCatering ul .img_div{
+        height: 238.84px;
+        width: 303.98px;
+    }
+    .tEventsCatering ul h5{
+        width: 300px;
+    }
+    .tEventsCatering ul p{
+        width: 300px;
+    }
+    .tEventsCatering ul li:nth-child(2){
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    .tEventsCatering ul h5 a{
+        font-size: 23.04px;
+    }
+
+    /* Footer */
+    .tFooter .tTestoBurger{
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width:992px) {
+
+    /* Nothing Brings People Together */
+    .tImageOfNothingBrings img{
+        width: 459px;
+    }
+    .tTextOfNothingBrings h2{
+        font-size: 40px;
+    }
+    .tNothingBringsPeopleTogether{
+        margin-left: -190px;
+        margin-right: -0px;
+    }
+    
+    /* Burgers What Else */
+    .tBurgersWhatElse .tInsideElements{
+        width: 690px;
+    }
+    .tBurgersWhatElse h2{
+        font-size: 61.6px;
+        margin-top: 10px;
+    }
+    .tBurgersWhatElse h6{
+        font-size: 19px;
+    }
+    .tBurgersWhatElse p{
+        padding: 0 34px;
+    }
+    .tBurgersWhatElse ul{
+        padding: 0 50px;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .tBurgersWhatElse ul img{
+        height: 65px;
+        width: 65px;
+    }
+
+    /* Discover The New Taste */
+    .tDiscoverTheNewTAste h2{
+        font-size: 40px;
+        width: 390px;
+    }
+    .tDiscoverTheNewTAste .tLeftSide p{
+        padding: 0px;
+        font-size: 17px;
+    }
+    .tDiscoverTheNewTAste .tRightSide p{
+        font-size: 17px;
+        padding: 0;
+    }
+    .tDiscoverTheNewTAste .tLeftSide img{
+        width: 390px;
+    }
+    .tDiscoverTheNewTAste .tRightSide img{
+        width: 270px;
+    }
+    .tDiscoverTheNewTAste{
+        min-height: 850px;
+    }
+
+    /* Careers  Order Now   Gift cards */
+    .tCareers_OrderNow_GiftCards .tInside{
+        top: 16px;
+    }
+    .tCareers_OrderNow_GiftCards h3{
+        font-size: 32px;
+    }
+    .tCareers_OrderNow_GiftCards p{
+        font-size: 16.4px;
+    }
+
+    /* Events & Catering */
+    .tEventsCatering h2{
+        font-size: 50.4px;
+    }
+    .tEventsCatering .header_p{
+        width: 750px;
+        font-size: 18px;
+        padding: 0 100px;
+    }
+    .tEventsCatering ul .img_div{
+        height: 259.28px;
+        width: 330px;
+    }
+    .tEventsCatering ul h5{
+        width: 330px;
+    }
+    .tEventsCatering ul p{
+        width: 330px;
+    }
+    .tEventsCatering h5 a{
+        font-size: 22.4px;
+    }
+    .tEventsCatering ul{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .tEventsCatering ul li:nth-child(3){
+        position: relative;
+        right: 165px;
+    }
+
+    /* Subscribe */
+    .tSubscripe h3{
+        font-size: 32px;
+    }
+    .tSubscripe p{
+        font-size: 16.4px;
+    }
+    .tSubscripe input{
+        height: 56px;
+        width: 343.41px;
+    }
+
+    /* Footer */
+    .tFooter  .tOrderNow, .tWorkingHours{
+        margin-bottom: 30px;
+    }
+    .tFooter .tInstagramFeed{
+        width: 100%;
+    }
+    .tFooter .tInstagramFeed .tLittleInstagramPhotos ul{
+        justify-content: flex-start;
+    }
+    .tFooter .tInstagramFeed .tLittleInstagramPhotos ul img{
+        height: 100px;
+        width: 100px;
+    }
+}
+
+@media screen and (max-width:768px) {
+
+    /* Nothing Brings People Together */
+    .tImageOfNothingBrings img{
+        width: 459px;
+        margin-left: 14%;
+    }
+    .tTextOfNothingBrings h2{
+        font-size: 36px;
+        padding: 0 1%;
+    }
+    .tNothingBringsPeopleTogether{
+        margin: 0 5%
+    }
+    
+    /* Burgers What Else */
+    .tBurgersWhatElse .tInsideElements{
+        width: 510px;
+    }
+    .tBurgersWhatElse ul{
+        width: 500px;
+        padding: 0;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .tBurgersWhatElse ul img{
+        height: 75px;
+        width: 75px;
+    }
+    .tBurgersWhatElse ul li{
+        margin: 0 7%;
+    }
+    .tBurgersWhatElse h2{
+        font-size: 52px;
+    }
+    .tBurgersWhatElse p{
+        padding: 0 20px;
+    }
+    .tBurgersWhatElse a{
+        padding: 14px 34px;
+    }
+
+    /* Discover The New Taste */
+    .tDiscoverTheNewTAste h2{
+        font-size: 36px;
+        width: 510px;
+    }
+    .tDiscoverTheNewTAste p{
+        padding: 0px;
+        width: 510px;
+    }
+    .tDiscoverTheNewTAste .tLeftSide{
+        margin-bottom: 50px;
+    }
+    .tDiscoverTheNewTAste .tLeftSide, .tDiscoverTheNewTAste .tRightSide{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .tDiscoverTheNewTAste .tLeftSide img{
+        width: 510px;
+    }
+    .tDiscoverTheNewTAste .tRightSide img{
+        width: 510px;
+    }
+
+    /* Careers  Order Now   Gift cards */
+    .tCareers_OrderNow_GiftCards .tLeftSide, .tCareers_OrderNow_GiftCards .tCenter, .tCareers_OrderNow_GiftCards .tRightSide{
+        width: 95%;
+        margin: 20px auto;
+    }
+    .tCareers_OrderNow_GiftCards .tCenter{
+        width: 99.2%;
+    }
+
+    /* Events & Catering */
+    .tEventsCatering{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .tEventsCatering .header_p{
+        width: 510px;
+        padding: 0 0;
+    }
+    .tEventsCatering ul .img_div{
+        height: 400.7px;
+        width: 510px;
+    }
+    .tEventsCatering ul h5{
+        width: 510px;
+    }
+    .tEventsCatering ul p{
+        width: 510px;
+    }
+    .tEventsCatering h5 a{
+        font-size: 25.6px;
+    }
+    .tEventsCatering ul li:nth-child(3){
+        right: 0px;
+    }
+
+    /* Subscribe */
+    .tSubscripe input{
+        display: block;
+        width: 408px;
+        height: 58px;
+        margin-bottom: 10px;
+    }
+    .tSubscripe p{
+        width: 65%;
+    }
+    .tSubscripe .tMyBtn{
+        height: 58px;
+        width: 408px;
+    }
+
+    /* Footer */
+    .tFooter{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .tFooterLinks .container_ul{
+        flex-wrap: wrap;
+    }
+    .tFooterLinks.container_ul ul{
+        margin: 0;
+        padding: 0;
+        justify-content: flex-start;
+    }
+    .all_right_reserved{
+        margin-left: 30px;
+    }
+}
+
+@media screen and (max-width:575px) {
+
+    /* .tResponsiveNav ul{
+        width: 100%;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    } */
+
+    .tImageOfNothingBrings img{
+        width: 100%;
+        margin-left: 0;
+    }
+    .tNothingBringsPeopleTogether{
+        margin: 0;
+    }
+
+    /* Burgers What Else */
+    .tBurgersWhatElse ul{
+        padding: 0;
+        width: 400px;
+        flex-direction: column;
+    }
+    .tBurgersWhatElse h2{
+        width: 94%;
+        text-align: center;
+    }
+    .tBurgersWhatElse p{
+        width: 450px;
+    }
+    .tBurgersWhatElse ul li{
+        margin-left: 0;
+        margin-right: 0;
+        width: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    /* Discover The New Taste */
+     .tDiscoverTheNewTAste h2{
+        width: 100%;
+    }
+    .tDiscoverTheNewTAste p{
+        width: 100%;
+    }
+    .tDiscoverTheNewTAste .tRightSide p{
+        margin-left: -30px;
+        width: 100%;
+    }
+    .tDiscoverTheNewTAste .tLeftSide{
+        padding: 0px;
+    }
+    .tDiscoverTheNewTAste .tLeftSide img{
+        width: 100%;
+    }
+    .tDiscoverTheNewTAste .tRightSide img{
+        width: 108%;
+        margin-left: -15px;
+    }
+    .tDiscoverTheNewTAste{
+        min-height: 1600px;
+    }
+
+    /* Events & Catering */
+    .tEventsCatering{
+        width: 99%;
+    }
+    .tEventsCatering .header_p{
+        width: 80%;
+    }
+    .tEventsCatering ul .img_div{
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        padding: 30px;
+    }
+    .tEventsCatering ul li .Tcontainer_fluid{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .tEventsCatering ul h5{
+        width: 80%;
+    }
+    .tEventsCatering ul p{
+        width: 80%;
+    }
+    .tEventsCatering h5 a{
+        font-size: 25.6px;
+    }
+    .tEventsCatering ul li:nth-child(3){
+        right: 0px;
+    }
+
+    /* Subscribe */
+    .tSubscripe h3{
+        font-size: 34.4px;
+    }
+    .tSubscripe p{
+        width: 75%;
+    }
+    .tSubscripe .input_btn_div{
+        width: 80%;
+    }
+    .tSubscripe input{
+        width: 100%;
+    }
+    .tSubscripe .tMyBtn{
+        width: 100%;
+    }
+
+    /* Footer */
+    .tFooter{
+        width: 100%;
+    }
+    .tTestoBurger, .tOrderNow, .tWorkingHours, .tInstagramFeed{
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    .tFooter .tInstagramFeed ul{
+        width: 110%;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .tNavMenu{
+        display: none;
+    }
+    .tResponsiveNav{
+        visibility: visible;
+    }
+}
+@media screen and (min-width:1220px) {
+    .dropdown_lists{
+        visibility: hidden;
+    }
+}

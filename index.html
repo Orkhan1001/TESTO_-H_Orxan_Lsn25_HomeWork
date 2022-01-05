@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <!-- Bootsrap Style -->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+        <!-- Google Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.css">
+        <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
+
+        <!-- My Style -->
+        <link rel="stylesheet" href="./Styles/style.css">
+    </head>
+    <body>
+
+        <!-- Header -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="tHeader">
+                    <div id="idNavbar" class="tNavMenu">
+                        <ul>
+                            <li class="tLogo">
+                                <img src="./Images/logo-01.png" alt="">
+                            </li>
+                            <li>
+                                <a class="tColorChangers" href="#">ABOUT</a>
+                                <div class="tDownArrow"></div>
+                            </li>
+                            <li>
+                                <a class="tColorChangers" href="#">OUR MENU</a>
+                                <div class="tDownArrow"></div>
+                            </li>
+                            <li>
+                                <a class="tColorChangers" href="#">SHOP</a>
+                                <div class="tDownArrow"></div>
+                            </li>
+                            <li>
+                                <a class="tColorChangers" href="#">BLOG</a>
+                                <div class="tDownArrow"></div>
+                            </li>
+                            <li>
+                                <a class="tColorChangers" href="#">HOURS & LOCATIONS</a>
+                                <div class="tDownArrow"></div>
+                            </li>
+                            <li><a href="#">768-654-3210</a></li>
+                            <li class="tColorChangers tshopping_icon">
+                                <i class="fa fa-shopping-bag fa-2x" aria-hidden="true"></i>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tResponsiveNav">
+                        <ul>
+                            <li class="col-xs-2 col-sm-3 col-md-3 col-lg-2">
+                                <img src="./Images/phone_icon.png" alt="">
+                            </li>
+                            <li class="col-xs-8 col-sm-6 col-md-6 col-lg-8">
+                                <img class="tResLogo" src="./Images/logo-01.png" alt="">
+                            </li>
+                            <li class="col-xs-2 col-sm-3 col-md-3 col-lg-2">
+                                <input style="display: none;" type="checkbox" name="" id="tCheck">
+                                <label for="tCheck" id="id_tMenuIcon" class="tMenuIcon" onclick="tDropDown()">
+                                    <div class="tLine topLine"></div>
+                                    <div class="tLine centerLine"></div>
+                                    <div class="tLine bottomLine"></div>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tHomeAbout">
+                        <a href="#">HOME</a>
+                        &nbsp;&nbsp;/&nbsp;&nbsp;
+                        <span>ABOUT US</span>
+                    </div>
+                    <h2>ABOUT TESTO</h2>
+                </div>
+
+
+                <ul id="id_dropdown" class="dropdown_lists">
+                    <li>
+                        <a class="tColorChangers" href="#">ABOUT</a>
+                        <div class="tDownArrow"></div>
+                    </li>
+                    <li>
+                        <a class="tColorChangers" href="#">OUR MENU</a>
+                        <div class="tDownArrow"></div>
+                    </li>
+                    <li>
+                        <a class="tColorChangers" href="#">SHOP</a>
+                        <div class="tDownArrow"></div>
+                    </li>
+                    <li>
+                        <a class="tColorChangers" href="#">BLOG</a>
+                        <div class="tDownArrow"></div>
+                    </li>
+                    <li>
+                        <a class="tColorChangers" href="#">HOURS & LOCATIONS</a>
+                        <div class="tDownArrow"></div>
+                    </li>
+                    <li><a href="#">768-654-3210</a></li>
+                    <li class="tColorChangers tshopping_icon">
+                        <i class="fa fa-shopping-bag fa-2x" aria-hidden="true"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Nothing Brings People Together -->
+        <div class="container">
+            <div class="row">
+                <div class="tNothingBringsPeopleTogether">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        <div class="tImageOfNothingBrings">
+                            <img src="./Images/about-01-img.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        <div class="tTextOfNothingBrings">
+                            <h2> NOTHING BRINGS PEOPLE TOGETHER LIKE A GOOD BURGER</h2>
+                            <p>
+                                Semper lacus cursus porta primis ligula risus tempus and sagittis ipsum mauris lectus laoreet purus ipsum tempor enim ipsum porta justo integer ultrice aligula lectus aenean magna and pulvinar purus at pretium gravida
+                            </p>
+                            <ul>
+                                <li>
+                                    <p>Fringilla risus, luctus mauris orci auctor purus euismod pretium purus pretium ligula rutrum tempor sapien</p>
+                                </li>
+                                <li>
+                                    <p>Quaerat sodales sapien euismod purus blandit</p>
+                                </li>
+                                <li>
+                                    <p>Nemo ipsam egestas volute turpis dolores ut aliquam quaerat sodales sapien undo pretium a purus mauris</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BURGERS... What Else? -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="tBurgersWhatElse">
+                    <div class="tInsideElements">
+                        <h2>
+                            <span>BURGERS...</span>
+                            WHAT ELSE?
+                        </h2>
+                        <p>
+                            Porta semper lacus cursus, feugiat primis ultrice a ligula risus auctor 
+                            an tempus feugiat dolor lacinia cubilia curae integer orci congue and metus
+                             mollislorem primis in integer metus curae integer orci congue integer and 
+                             primis in integer metus mollis faucibus
+                        </p>
+                        <ul>
+                            <li>
+                                <img src="./Images/burger_icon.png" alt="burger_icon">
+                                <h6>BURGERS</h6>
+                            </li>
+                            <li>
+                                <img src="./Images/fries_icon.png" alt="frie_icon">
+                                <h6>FRIES</h6>
+                            </li>
+                            <li>
+                                <img src="./Images/chicken_icon.png" alt="chicken_icon">
+                                <h6>CHICKEN</h6>
+                            </li>
+                            <li>
+                                <img src="./Images/salad_icon.png" alt="salad_icon">
+                                <h6>SALADS</h6>
+                            </li>
+                            <li>
+                                <img src="./Images/desert_icon.png" alt="desert_icon">
+                                <h6>DESERTS</h6>
+                            </li>
+                            <li>
+                                <img src="./Images/drink_icon.png" alt="drink_icon">
+                                <h6>DRINKS</h6>
+                            </li>
+                        </ul>
+                        <a href="#">EXPLORE FULL MENU</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Discover The New taste -->
+        <div class="container">
+                <div class="tDiscoverTheNewTAste">
+                    <div class="col-xs-12 col-sm-7 col-md-6 col-lg-6">
+                       <div class="row">
+                        <div class="tLeftSide">
+                            <h2>
+                                DISCOVER THE NEW TASTE OF THE BURGER
+                            </h2>
+                            <p>
+                                Porta semper lacus cursus, feugiat primis ultrice and ligula
+                                risus auctor an tempus feugiat dolor lacinia cubilia a curae
+                                integer orci congue and metus mollislorem primis
+                            </p>
+                            <img src="./Images/img-10.jpg" alt="fries_img">
+                        </div>
+                       </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-5 col-md-6 col-lg-6">
+                        <div class="container-fluid">
+                            <div class="tRightSide">
+                                <img src="./Images/img-15.jpg" alt="Burger_img">
+                                <p>
+                                    Porta semper lacus cursus, feugiat primis
+                                    ultrice and ligula risus auctor orci tempus
+                                    feugiat dolor lacinia cubilia integer
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        <!-- Careers   Order Now   Gift Cards -->
+        <div class="container-fluid">
+                <div class="tCareers_OrderNow_GiftCards">
+
+                    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+                        <div class="row">
+                            <div class="tLeftSide">
+                                <div class="tInside">
+                                    <h3>CAREERS</h3>
+                                    <p>Want to join our team?</p>
+                                    <a href="#">LEARN MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-4 col-md-6 col-lg-6">
+                        <div class="tCenter">
+                            <div class="tInside">
+                                <h3>ORDER NOW</h3>
+                                <p>Enjoy testo burger at home</p>
+                                <a href="#">LEARN MORE</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+                        <div class="row">
+                            <div class="tRightSide">
+                                <div class="tInside">
+                                    <h3>GIFT CARDS</h3>
+                                    <p>Give the gift of Yummy!</p>
+                                    <a href="#">LEARN MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        <!-- Events & Catering -->
+        <div class="container-fluid">
+                <div class="tEventsCatering">
+                    <h2>EVENTS & CATERING</h2>
+                    <p class="header_p">
+                        Aliquam a augue suscipit, luctus neque purus ipsum neque undo
+                        dolor primis libero tempus, blandit a cursus varius magna
+                    </p>
+                    <ul>
+                        <li>
+                            <div class="container-fluid Tcontainer_fluid">
+                                <div class="img_div">
+                                    <img src="./Images/event_catering_img-01.jpg" alt="quaerat neque image">
+                                </div>
+                                <h5>
+                                    <a href="#">QUAERAT NEQUE PURUS IPSUM NEQUE DOLOR</a>
+                                </h5>
+                                <p>QUAERAT NEQUE PURUS IPSUM NEQUE DOLOR PRIMIS TEMPUS IMPEDIT</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="container-fluid Tcontainer_fluid">
+                                <div class="img_div">
+                                    <img src="./Images/event_catering_img-02.jpg" alt="tempor blanditimage">
+                                </div>
+                                <h5>
+                                    <a href="#">TEMPOR BLANDIT SAPIEN AT GRAVIDA DONEC IPSUM</a>
+                                </h5>
+                                <p>NEQUE DOLOR PRIMIS LIBERO TEMPUS IMPEDIT TEMPOR SAPIEN GRAVIDA</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="container-fluid Tcontainer_fluid">
+                                <div class="img_div">
+                                    <img src="./Images/event_catering_img-03.jpg" alt="neque dolor image">
+                                </div>
+                                <h5>
+                                    <a href="#">NEQUE DOLOR PRIMIS A LIBERO TEMPUS A TEMPOR</a>
+                                </h5>
+                                <p>IMPEDIT TEMPOR AT DONEC SAPIEN IPSUM A NEQUE DOLOR PRIMIS LIBERO</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+
+        <!-- Subscribe -->
+        <div class="container">
+            <div class="row">
+                <div class="tSubscripe">
+                    <h3>SUBSCRIBE TO NEWSLETTER</h3>
+                    <p>Subscribe to the weekly newsletter for all the latest updates</p>
+                    <div class="input_btn_div">
+                        <input type="text" placeholder="Your email address">
+                        <button class="tMyBtn">SIGN UP</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="container">
+            <!-- <div class="row"> -->
+                <div class="tFooter">
+
+                    <!-- Testo Burger -->
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
+                        <div class="tTestoBurger">
+                            <img src="./Images/logo-01.png" alt="Testo Burger Logo">
+                            <p>
+                                An orci nullam tempor a sapien eget gravida and integer donec ipsum porta justo integer
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Order Now -->
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="tOrderNow">
+                            <h5>ORDER NOW</h5>
+                            <p>8721 M Central Avenue,</p>
+                            <p>Los Angeles, CA 90036</p>
+                            <p>
+                                <a class="tHelloMail" href="#">hello@yourdomain.com</a>
+                            </p>
+                            <p>
+                                <a class="tPhoneNumber" href="#">789-654-3210</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Working Hours -->
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="tWorkingHours">
+                            <h5>WORKING HOURS</h5>
+                            <p>Quaerat neque purus ipsum at neque dolor primis tempus</p>
+                            <p>Mon-Fri: 9:00AM - 10:00PM</p>
+                            <p>Saturday: 10:00AM - 8:30PM</p>
+                            <p>Sunday: 12:00PM - 5:00PM</p>
+                        </div>
+                    </div>
+
+                    <!-- Instagram Feed -->
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3">
+                        <div class="tInstagramFeed">
+                            <h5>INSTAGRAM FEED</h5>
+                            <div class="tLittleInstagramPhotos">
+                                <ul>
+                                    <li>
+                                        <a href="#" target="blanck">
+                                            <img src="./Images/insta_img-01.jpg" alt="">
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#" target="blanck">
+                                            <img src="./Images/insta_img-02.jpg" alt="">
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#" target="blanck">
+                                            <img src="./Images/insta_img-03.jpg" alt="">
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#" target="blanck">
+                                            <img src="./Images/insta_img-04.jpg" alt="">
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#" target="blanck">
+                                            <img src="./Images/insta_img-05.jpg" alt="">
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#" target="blanck">
+                                            <img src="./Images/insta_img-06.jpg" alt="">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="height: 60px;"></div>
+                    
+                    <div class="tFooterLinks">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <hr>
+                        </div>
+                       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="row">
+                                <ul class="container_ul">
+                                    <li class="all_right_reserved">© 2020 Testo. All Rights Reserved</li>
+                                    <li>
+                                        <ul>
+                                            <li>
+                                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                                                Facebook &nbsp;&nbsp;|
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                                                Twitter &nbsp;&nbsp;|
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                                                Youtube &nbsp;&nbsp;|
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-yelp" aria-hidden="true"></i>
+                                                Yelp
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                       </div>
+                    </div>
+
+                </div>
+            <!-- </div> -->
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="height: 40px;"></div>
+
+
+        <!-- Scroll Up Button -->
+        <div id="id_up" class="btn btn-danger tScrollUp" onclick="fScrollUp()">&#8593;</div>
+
+
+
+
+
+
+        <!-- Bootstrap Script -->
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <!-- My Script -->
+        <script src="./Scripts/main.js"></script>
+    </body>
+</html>
